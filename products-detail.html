@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name - Your E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">YourStore</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="categories-dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Apparel</a></li>
+                            <li><a href="#">Home Goods</a></li>
+                            <li><a href="#">Books</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="auth.html">My Account</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-detail-page">
+        <div class="container">
+            <div class="product-gallery">
+                <img src="https://via.placeholder.com/600x600?text=Main+Product+Image" alt="Main Product Image" class="main-product-image">
+                <div class="thumbnail-images">
+                    <img src="https://via.placeholder.com/100x100?text=Thumb+1" alt="Thumbnail 1" class="thumbnail active">
+                    <img src="https://via.placeholder.com/100x100?text=Thumb+2" alt="Thumbnail 2" class="thumbnail">
+                    <img src="https://via.placeholder.com/100x100?text=Thumb+3" alt="Thumbnail 3" class="thumbnail">
+                    <img src="https://via.placeholder.com/100x100?text=Thumb+4" alt="Thumbnail 4" class="thumbnail">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">Premium Wireless Headphones</h1>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="rating-text">(4.5 / 5 - 120 Reviews)</span>
+                </div>
+                <p class="product-price">$149.99</p>
+                <p class="product-description">
+                    Immerse yourself in rich, high-fidelity sound with our Premium Wireless Headphones. Featuring noise-cancelling technology and a comfortable, ergonomic design, they're perfect for long listening sessions, travel, or focused work. Enjoy up to 30 hours of battery life on a single charge.
+                </p>
+
+                <div class="product-options">
+                    <div class="option-group">
+                        <label for="color">Color:</label>
+                        <select id="color">
+                            <option value="black">Black</option>
+                            <option value="silver">Silver</option>
+                            <option value="white">White</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary add-to-cart-large"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="btn btn-secondary buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="container product-details-reviews">
+            <div class="tabs">
+                <button class="tab-link active" data-tab="description">Description</button>
+                <button class="tab-link" data-tab="specifications">Specifications</button>
+                <button class="tab-link" data-tab="reviews">Reviews</button>
+            </div>
+            <div id="description" class="tab-content active">
+                <h3>Product Overview</h3>
+                <p>These premium wireless headphones deliver an unparalleled audio experience, combining cutting-edge technology with elegant design. Enjoy crystal-clear highs, deep resonant bass, and precise mid-tones, bringing your music, podcasts, and calls to life.</p>
+                <h3>Features:</h3>
+                <ul>
+                    <li>Active Noise Cancellation for immersive listening</li>
+                    <li>Up to 30 hours of battery life with quick charge feature</li>
+                    <li>Comfortable over-ear design with plush earcups</li>
+                    <li>Intuitive touch controls for playback and calls</li>
+                    <li>Bluetooth 5.0 for stable, seamless connectivity</li>
+                </ul>
+            </div>
+            <div id="specifications" class="tab-content">
+                <h3>Technical Specifications</h3>
+                <table>
+                    <tr><th>Connectivity</th><td>Bluetooth 5.0, USB-C</td></tr>
+                    <tr><th>Battery Life</th><td>30 hours (ANC off), 22 hours (ANC on)</td></tr>
+                    <tr><th>Charging Time</th><td>2 hours for full charge, 10 min for 3 hours playback</td></tr>
+                    <tr><th>Drivers</th><td>40mm Dynamic Drivers</td></tr>
+                    <tr><th>Frequency Response</th><td>20Hz - 20kHz</td></tr>
+                    <tr><th>Weight</th><td>250g</td></tr>
+                </table>
+            </div>
+            <div id="reviews" class="tab-content">
+                <h3>Customer Reviews (120)</h3>
+                <div class="review-summary">
+                    <p>Average Rating: <span class="average-stars">4.5</span> <i class="fas fa-star"></i></p>
+                    <button class="btn btn-secondary write-review-btn">Write a Review</button>
+                </div>
+                <div class="individual-review">
+                    <p class="review-header">
+                        <strong>John Doe</strong> - <span class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        <span class="review-date">on July 15, 2025</span>
+                    </p>
+                    <p class="review-text">"Absolutely love these headphones! The sound quality is phenomenal, and the noise cancellation is a game-changer for my commute. Highly recommend!"</p>
+                </div>
+                <div class="individual-review">
+                    <p class="review-header">
+                        <strong>Jane Smith</strong> - <span class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                        <span class="review-date">on July 10, 2025</span>
+                    </p>
+                    <p class="review-text">"Great headphones for the price. Comfortable for long wear. Battery life is excellent. Only minor complaint is the bass can be a little overwhelming sometimes, but overall very satisfied."</p>
+                </div>
+                </div>
+        </div>
+
+        <section class="container related-products">
+            <h2>Customers also viewed</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="product-detail.html">
+                        <img src="https://via.placeholder.com/250x250?text=Related+1" alt="Accessory 1">
+                        <h3>Related Item 1</h3>
+                        <p class="price">$29.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </a>
+                    <button class="btn btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <a href="product-detail.html">
+                        <img src="https://via.placeholder.com/250x250?text=Related+2" alt="Accessory 2">
+                        <h3>Related Item 2</h3>
+                        <p class="price">$19.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                        </div>
+                    </a>
+                    <button class="btn btn-add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>123 E-commerce St, City, Country</p>
+                <p>Email: info@yourstore.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="return-policy.html">Return Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Your E-commerce Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="productsData.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
