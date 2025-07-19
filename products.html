@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Your E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">YourStore</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="categories-dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Apparel</a></li>
+                            <li><a href="#">Home Goods</a></li>
+                            <li><a href="#">Books</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="auth.html">My Account</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-listing-page">
+        <div class="container">
+            <h1>All Products</h1>
+            <div class="listing-content">
+                <aside class="filters-sidebar">
+                    <h2>Filters</h2>
+
+                    <div class="filter-group">
+                        <h3>Category</h3>
+                        <ul>
+                            <li><input type="checkbox" id="cat-elec" value="electronics"><label for="cat-elec">Electronics</label></li>
+                            <li><input type="checkbox" id="cat-app" value="apparel"><label for="cat-app">Apparel</label></li>
+                            <li><input type="checkbox" id="cat-home" value="home-goods"><label for="cat-home">Home Goods</label></li>
+                            <li><input type="checkbox" id="cat-books" value="books"><label for="cat-books">Books</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <input type="range" id="price-range-min" min="0" max="500" value="0">
+                        <input type="range" id="price-range-max" min="0" max="500" value="500">
+                        <div class="price-display">
+                            <span id="min-price-val">$0</span> - <span id="max-price-val">$500+</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Brand</h3>
+                        <ul>
+                            <li><input type="checkbox" id="brand-a" value="brand-a"><label for="brand-a">Brand A</label></li>
+                            <li><input type="checkbox" id="brand-b" value="brand-b"><label for="brand-b">Brand B</label></li>
+                            <li><input type="checkbox" id="brand-c" value="brand-c"><label for="brand-c">Brand C</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Rating</h3>
+                        <ul>
+                            <li><input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </label></li>
+                            <li><input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> & Up
+                            </label></li>
+                            <li><input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> & Up
+                            </label></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary apply-filters-btn">Apply Filters</button>
+                    <button class="btn btn-secondary clear-filters-btn">Clear Filters</button>
+                </aside>
+
+                <section class="products-display-area">
+                    <div class="sort-options">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by">
+                            <option value="relevance">Relevance</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="rating">Top Rated</option>
+                        </select>
+                    </div>
+
+                    <div class="product-grid">
+                        </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>123 E-commerce St, City, Country</p>
+                <p>Email: info@yourstore.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="return-policy.html">Return Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Your E-commerce Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="productsData.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
