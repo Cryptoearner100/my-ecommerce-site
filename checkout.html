@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Your E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">YourStore</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="categories-dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Apparel</a></li>
+                            <li><a href="#">Home Goods</a></li>
+                            <li><a href="#">Books</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="auth.html">My Account</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="checkout-page">
+        <div class="container">
+            <h1>Checkout</h1>
+
+            <div class="checkout-progress-bar">
+                <div class="progress-step active" id="step-shipping">
+                    <div class="step-circle"><i class="fas fa-truck"></i></div>
+                    <span class="step-label">Shipping</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" id="step-payment">
+                    <div class="step-circle"><i class="fas fa-credit-card"></i></div>
+                    <span class="step-label">Payment</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" id="step-review">
+                    <div class="step-circle"><i class="fas fa-check-circle"></i></div>
+                    <span class="step-label">Review & Place Order</span>
+                </div>
+            </div>
+
+            <div class="checkout-content-wrapper">
+                <section class="checkout-steps">
+                    <div class="checkout-step-content active" id="shipping-address-step">
+                        <h2>1. Shipping Address</h2>
+                        <form id="shipping-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address1">Address Line 1</label>
+                                <input type="text" id="address1" name="address1" placeholder="123 Main St" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address2">Address Line 2 (Optional)</label>
+                                <input type="text" id="address2" name="address2" placeholder="Apt, Suite, Building">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" placeholder="Anytown" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State / Province</label>
+                                    <input type="text" id="state" name="state" placeholder="State/Province" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="zipCode">Zip Code</label>
+                                    <input type="text" id="zipCode" name="zipCode" placeholder="12345" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="usa">United States</option>
+                                        <option value="can">Canada</option>
+                                        <option value="ind">India</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="saveAddress">
+                                <label for="saveAddress">Save this address for future use</label>
+                            </div>
+                            <div class="form-actions">
+                                <a href="cart.html" class="btn btn-secondary back-to-cart-btn"><i class="fas fa-arrow-left"></i> Back to Cart</a>
+                                <button type="submit" class="btn btn-primary next-step-btn">Continue to Payment <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="checkout-step-content" id="payment-options-step">
+                        <h2>2. Payment Options</h2>
+                        <form id="payment-form">
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                                    <label for="creditCard"><i class="fas fa-credit-card"></i> Credit / Debit Card</label>
+                                    <div class="credit-card-form">
+                                        <div class="form-group">
+                                            <label for="cardNumber">Card Number</label>
+                                            <input type="text" id="cardNumber" placeholder="**** **** **** ****" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cardName">Name on Card</label>
+                                            <input type="text" id="cardName" placeholder="John Doe" required>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="expiryDate">Expiry Date</label>
+                                                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cvv">CVV</label>
+                                                <input type="text" id="cvv" placeholder="123" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="payment-method">
+                                    <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                                    <label for="paypal"><i class="fab fa-paypal"></i> PayPal</label>
+                                    <p class="payment-description">You will be redirected to PayPal to complete your purchase.</p>
+                                </div>
+
+                                <div class="payment-method">
+                                    <input type="radio" id="googlePay" name="paymentMethod" value="googlePay">
+                                    <label for="googlePay"><i class="fab fa-google-pay"></i> Google Pay</label>
+                                    <p class="payment-description">Complete your purchase with Google Pay.</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="billingSameAsShipping" checked>
+                                <label for="billingSameAsShipping">Billing address same as shipping address</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary prev-step-btn"><i class="fas fa-arrow-left"></i> Back to Shipping</button>
+                                <button type="submit" class="btn btn-primary next-step-btn">Continue to Order Review <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="checkout-step-content" id="order-review-step">
+                        <h2>3. Review Your Order</h2>
+                        <div class="review-summary-full">
+                            <div class="summary-section">
+                                <h3>Shipping Address</h3>
+                                <p id="review-shipping-address">
+                                    John Doe<br>
+                                    123 Main St, Apt 4B<br>
+                                    Anytown, State/Province 12345<br>
+                                    United States<br>
+                                    +123-456-7890
+                                </p>
+                                <button class="btn btn-link edit-step-btn" data-target-step="shipping-address-step">Edit</button>
+                            </div>
+
+                            <div class="summary-section">
+                                <h3>Payment Method</h3>
+                                <p id="review-payment-method">Credit Card ending in **** **** 1234</p>
+                                <button class="btn btn-link edit-step-btn" data-target-step="payment-options-step">Edit</button>
+                            </div>
+
+                            <div class="summary-section">
+                                <h3>Items in Order</h3>
+                                <div class="review-order-items">
+                                    <div class="review-item">
+                                        <img src="https://via.placeholder.com/60x60?text=Headphones" alt="Product Image">
+                                        <div class="item-info">
+                                            <p class="item-title">Premium Wireless Headphones</p>
+                                            <p class="item-qty-price">Qty: 1 x $149.99</p>
+                                        </div>
+                                        <span class="item-total">$149.99</span>
+                                    </div>
+                                    <div class="review-item">
+                                        <img src="https://via.placeholder.com/60x60?text=Mouse" alt="Product Image">
+                                        <div class="item-info">
+                                            <p class="item-title">Ergonomic Wireless Mouse</p>
+                                            <p class="item-qty-price">Qty: 2 x $35.00</p>
+                                        </div>
+                                        <span class="item-total">$70.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-summary review-order-summary">
+                            <h2>Order Summary</h2>
+                            <div class="summary-line">
+                                <span>Subtotal:</span>
+                                <span class="summary-value">$219.99</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Shipping:</span>
+                                <span class="summary-value">$10.00</span>
+                            </div>
+                            <div class="summary-line total-line">
+                                <span>Total:</span>
+                                <span class="summary-value">$229.99</span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary prev-step-btn"><i class="fas fa-arrow-left"></i> Back to Payment</button>
+                            <button type="submit" class="btn btn-primary place-order-btn">Place Order</button>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="checkout-order-summary">
+                    <h2>Your Order</h2>
+                    <div class="review-order-items-sidebar">
+                        <div class="review-item">
+                            <img src="https://via.placeholder.com/60x60?text=Headphones" alt="Product Image">
+                            <div class="item-info">
+                                <p class="item-title">Premium Wireless Headphones</p>
+                                <p class="item-qty-price">Qty: 1 x $149.99</p>
+                            </div>
+                            <span class="item-total">$149.99</span>
+                        </div>
+                        <div class="review-item">
+                            <img src="https://via.placeholder.com/60x60?text=Mouse" alt="Product Image">
+                            <div class="item-info">
+                                <p class="item-title">Ergonomic Wireless Mouse</p>
+                                <p class="item-qty-price">Qty: 2 x $35.00</p>
+                            </div>
+                            <span class="item-total">$70.00</span>
+                        </div>
+                        </div>
+                    <div class="cart-summary-lite">
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span class="summary-value">$219.99</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Shipping:</span>
+                            <span class="summary-value">$10.00</span>
+                        </div>
+                        <div class="summary-line total-line">
+                            <span>Total:</span>
+                            <span class="summary-value">$229.99</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>123 E-commerce St, City, Country</p>
+                <p>Email: info@yourstore.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="return-policy.html">Return Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Your E-commerce Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="productsData.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
